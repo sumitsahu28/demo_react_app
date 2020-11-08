@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import * as React from 'react';
 import './App.css';
+import List from './list';
+import SelectedList  from './selectedList'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import actions from './redux/actions';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+class App extends React.Component {
+  
+ render(){
+    return (
+        <div className='rowC'>
+            <List provinces={this.props.provinces} setSelected={this.props.actions.modifyList} />
+            <SelectedList provinces={this.props.provinces} setUnSelected={this.props.actions.modifyList}/>
+        </div>
+    );
+    }
+ }
 
-export default App;
+ function mapStateToProps(state) {
+    return state
+  }
+  function mapDispatchToProps(dispatch) {
+    return {
+      actions: bindActionCreators(actions, dispatch)
+    }
+  }
+  export default connect(mapStateToProps, mapDispatchToProps)(App)

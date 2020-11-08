@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import configureStore from './redux/store'
+
+import { Provider } from "react-redux";
+import * as data from './data.json';
+let initialState = {
+  provinces: data.provinces
+}
+let store = configureStore(initialState)
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </Provider>,
+  document.getElementById('element')
 );
 
 // If you want to start measuring performance in your app, pass a function

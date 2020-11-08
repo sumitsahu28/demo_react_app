@@ -1,0 +1,25 @@
+{
+    "provinces" : [
+        { 
+          "state": "Maharashtra",
+          "cities": [
+            { "city": "Mumbai", "checked": false },
+            { "city": "Pune", "checked": false }
+          ]
+        },
+        { 
+            "state": "Madhaya Pradesh",
+            "cities": [
+              { "city": "Bhopal", "checked": false },
+              { "city": "Indore", "checked": false }
+            ]
+        },
+        { 
+            "state": "Uttar Pradesh",
+            "cities": [
+              { "city": "Lucknow", "checked": false },
+              { "city": "Kanpur", "checked": false }
+            ]
+        }
+      ]
+}
