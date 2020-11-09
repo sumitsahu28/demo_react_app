@@ -25,7 +25,6 @@ export default class SelectedList extends React.Component {
       var stateCheck = this.checkStateExists(this.props.provinces);
         return (
             <div className="left common">
-              {/* <h3>Selected List</h3> */}
               <div>
                 {stateCheck && <span>No Value Selected</span>}
               </div>

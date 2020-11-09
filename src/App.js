@@ -5,7 +5,7 @@ import SelectedList  from './selectedList'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import actions from './redux/actions';
-import { Navbar, Nav, Form, Button, FormControl } from 'react-bootstrap';
+import { Navbar, Nav, Form, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
 class App extends React.Component {

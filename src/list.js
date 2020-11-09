@@ -8,7 +8,6 @@ export default class List extends React.Component {
     render() {
         return (
             <div className="right common">
-              {/* <h3>List</h3> */}
             {this.props.provinces.map((state, index) => (
               <div key={index}>
                 <h2>{state.state}</h2>
