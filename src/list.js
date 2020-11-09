@@ -10,7 +10,7 @@ export default class List extends React.Component {
             <div className="right common">
             {this.props.provinces.map((state, index) => (
               <div key={index}>
-                <h2>{state.state}</h2>
+                <h5>{state.state}</h5>
       
                 <div>
                   {state.cities.map((city, innerIndex) => (

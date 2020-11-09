@@ -31,7 +31,7 @@ export default class SelectedList extends React.Component {
             {this.props.provinces.map((state, index) => {
               if(this.checkedExists(state)) {
               return (<div key={index}>
-                <h2>{state.state}</h2>
+                <h5>{state.state}</h5>
       
                 <div className="block">
                   {state.cities.map((city, innerIndex) => {
