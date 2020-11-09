@@ -1,2 +1,53 @@
+.rowC.wrapper {
+    padding: 100px 100px 152px;
+    background-image: linear-gradient(45deg, purple, #660080);
+    color: #ffffff;
+    display: flex;
+    justify-content: space-evenly;
+}
 
-.rowC{display:flex; flex-direction:row;}
+.block div {
+    padding-bottom: 10px;
+}
+
+.common > h3 {
+    font-size: 29px;
+    margin: 0;
+    border-bottom: 3px solid #000;
+    padding-bottom: 11px;
+}
+
+.common {
+    background: #ffffff;
+    color: #000000;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.ui.checkbox {
+    margin-bottom: 11px;
+}
+
+.color-nav {
+    background-color: white;
+}
+
+.nav-link {
+    color: black !important;
+}
+
+.navbar-brand {
+    color: purple !important;
+    font-size: 1.5em !important;
+}
+
+.selectedstyle{
+    background-color: gray;
+    padding: 10px;
+    border-radius: 6px;
+    margin: 5px;
+}
+
+.spanstyle{
+    float: right;
+}

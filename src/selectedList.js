@@ -11,20 +11,33 @@ export default class SelectedList extends React.Component {
         });
         return exists;
     }
+    checkStateExists = (states) => {
+      let exists = true;
+        states.forEach(state => {
+          state.cities.forEach(element => {
+              if(element.checked === true)
+              {exists = false;}
+          });
+        });
+        return exists;
+    }
     render() {
+      var stateCheck = this.checkStateExists(this.props.provinces);
         return (
-            <div>
-              Selected List
+            <div className="left common">
+              {/* <h3>Selected List</h3> */}
+              <div>
+                {stateCheck && <span>No Value Selected</span>}
+              </div>
             {this.props.provinces.map((state, index) => {
-                if(this.checkedExists(state)) {
-
+              if(this.checkedExists(state)) {
               return (<div key={index}>
                 <h2>{state.state}</h2>
       
-                <div>
+                <div className="block">
                   {state.cities.map((city, innerIndex) => {
                       if(city.checked) {
-                      return <div key={innerIndex}>{city.city}<span onClick={()=>{this.props.setUnSelected(index, innerIndex, city.checked)}} >  X</span></div>
+                      return <div className="selectedstyle" key={innerIndex}>{city.city}<span className="spanstyle" onClick={()=>{this.props.setUnSelected(index, innerIndex, city.checked)}} >  x</span></div>
                       } else {
                           return "";
                       }
